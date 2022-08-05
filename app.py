@@ -64,7 +64,7 @@ def register():
             db.session.commit()
         except IntegrityError:
             flash("Username or E-mail already exists!")
-            flash("Usuário or E-mail já existe!")
+            flash("Usuário ou E-mail já existe!")
         else:
             return redirect(url_for('login'))
     return render_template('register.html')
@@ -79,6 +79,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user is None or not user.check_password(password):
             flash("Incorrect Username or Password")
+            flash("Incorreto Usuário oú Senha")
             return redirect(url_for('login'))
         login_user(user)
         return redirect(url_for('index'))
