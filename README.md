@@ -4,13 +4,13 @@
 heroku login -i
 
 ## cria app
-heroku create <nome do app>
+heroku create nome_do_app
 
 ## cria Banco
-heroku addons:create heroku-postgresql:hobby-dev --app <nome do app>
+heroku addons:create heroku-postgresql:hobby-dev --app nome_do_app
 
 ## ve config do app
-heroku config --app <nome do app>
+heroku config --app nome_do_app
 
 ## para atualizar
 git push heroku main
