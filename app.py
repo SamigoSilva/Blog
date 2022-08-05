@@ -79,7 +79,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user is None or not user.check_password(password):
             flash("Incorrect Username or Password")
-            flash("Incorreto Usuário oú Senha")
+            flash("Incorreto Usuário ou Senha")
             return redirect(url_for('login'))
         login_user(user)
         return redirect(url_for('index'))
