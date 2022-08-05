@@ -64,6 +64,7 @@ def register():
             db.session.commit()
         except IntegrityError:
             flash("Username or E-mail already exists!")
+            flash("Usuário or E-mail já existe!")
         else:
             return redirect(url_for('login'))
     return render_template('register.html')
